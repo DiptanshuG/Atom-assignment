@@ -1,4 +1,3 @@
-// LeftSection.tsx
 import React from "react";
 import Logo from "./Logo";
 import LoginForm from "./LoginForm";
@@ -18,7 +17,11 @@ const LeftSection: React.FC = () => {
           <Button text="Google" iconSrc="/google.svg" />
           <Button text="Facebook" iconSrc="/fb.svg" />
         </div>
-        <hr className="bg-gray-300 my-6" />
+        <div className="text-center my-6 relative">
+          <div className="absolute top-1/2 left-0 w-[43.333333%] border-b border-gray-300"></div>
+          <span className="relative z-10 text-black">Or</span>
+          <div className="absolute top-1/2 right-0 w-[43.333333%] border-b border-gray-300"></div>
+        </div>
         <LoginForm />
         <Footer />
       </div>
