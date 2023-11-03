@@ -1,44 +1,27 @@
+// LeftSection.tsx
 import React from "react";
+import Logo from "./Logo";
 import LoginForm from "./LoginForm";
+import Button from "../Button";
+import Footer from "../Footer";
 
 const LeftSection: React.FC = () => {
   return (
-    <div className="w-full md:w-1/3 bg-[#FFFFFF] h-screen p-8 flex flex-col justify-center items-center">
-      <div className="mb-4">
-        <img src="/logo.svg" alt="logo" className="w-92 h-92" />
-      </div>
-
-      <h1
-        className="text-4xl font-semibold text-center mb-4 text-black"
-        style={{ fontSize: "25px", lineHeight: "34.1px" }}
-      >
+    <div className="w-full md:w-1/3 bg-[#FFFFFF] h-screen p-0 md:p-10 flex flex-col justify-center items-center">
+      <Logo />
+      <h1 className="text-2xl text-center  my-4 text-black font-nunito font-semibold text-2xl  text-[#000000]">
         Log in
       </h1>
-      <div className="flex justify-center space-x-5 mb-6">
-        <a
-          href="#"
-          className="bg-[#F7F7F8] text-[#030229] flex text-sm items-center p-2 px-4 rounded"
-        >
-          <img src="/google.svg" alt="google" className="w-18 h-18 mr-2" />
-          Google
-        </a>
-        <a
-          href="#"
-          className="bg-[#F7F7F8] text-[#030229] text-sm flex items-center p-2 px-4 rounded"
-        >
-          <img src="/fb.svg" alt="facebook" className="w-18 h-18 mr-2" />
-          Facebook
-        </a>
-      </div>
-      <hr className="bg-gray-300 my-6" />
-      <LoginForm />
 
-      <p className="text-center mt-4 text-sm text-black">
-        Don't have an account yet? &nbsp;
-        <a href="#" className="text-[#605BFF] text-sm">
-          New Account
-        </a>
-      </p>
+      <div className="w-4/5 mx-auto">
+        <div className="flex justify-center space-x-6 mt-2 mb-6 w-full">
+          <Button text="Google" iconSrc="/google.svg" />
+          <Button text="Facebook" iconSrc="/fb.svg" />
+        </div>
+        <hr className="bg-gray-300 my-6" />
+        <LoginForm />
+        <Footer />
+      </div>
     </div>
   );
 };
